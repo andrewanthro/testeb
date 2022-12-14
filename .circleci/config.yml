@@ -14,4 +14,4 @@ workflows:
             apps/test/.* build-test true
             apps/angular-fe/.* build-angular_fe true
           base-revision: main
-          config-path: .circlei/continue_config.yml
+          config-path: .circleci/continue_config.yml
