@@ -17,8 +17,8 @@ workflows:
           - image: alpine:3.15
         steps:
           - run:
-            name: Running test
-            command: echo 'Running Test Build'
+              name: Running test
+              command: echo 'Running Test Build'
   angularbuild:
     when: << pipeline.parameters.build-angular-fe >>
     jobs:
@@ -27,4 +27,4 @@ workflows:
           - image: alpine:3.15
         steps:
           - run:
-            command: echo 'Running angular build'
+              command: echo 'Running angular build'
