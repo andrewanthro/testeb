@@ -1,7 +1,7 @@
 version: 2.1
 
 parameters:
-  build-angular_fe:
+  build-angular-fe:
     type: boolean
     default: false
   build-test:
