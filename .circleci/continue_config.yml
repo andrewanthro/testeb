@@ -19,7 +19,7 @@ jobs:
       - run: echo 'Building Test'
       - run: node --version
       - run: cd apps/test
-      - run: npm i
+      - run: npm i --dev
       - run: jest
   build-angular-job:
     docker:
@@ -31,7 +31,7 @@ jobs:
       - run: echo 'Building angular'
       - run: node --version
       - run: cd apps/angular-fe
-      - run: npm i
+      - run: npm i --dev
       - run: jest
 
 workflows:
