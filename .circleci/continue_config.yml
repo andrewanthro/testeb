@@ -20,7 +20,7 @@ jobs:
       - run: node --version
       - run: cd apps/test
       - run: npm i --production=false
-      - run: jest
+      - run: npm run test
   build-angular-job:
     docker:
       - image: cimg/node:19.2.0
@@ -32,7 +32,7 @@ jobs:
       - run: node --version
       - run: cd apps/angular-fe
       - run: npm i --production=false
-      - run: jest
+      - run: npm run test
 
 workflows:
   testbuildwf:
