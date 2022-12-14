@@ -1,0 +1,17 @@
+version: 2.1
+
+setup: true
+
+orbs:
+  path-filtering: circleci/path-filtering@0.1.3
+
+workflows:
+  always-run:
+    jobs:
+      - path-filtering/filter:
+          name: check-updated-files
+          mapping: |
+            apps/test/.* build-test true
+            apps/angular-fe/.* build-angular_fe true
+          base-revision: main
+          config-path: .circlei/continue_config.yml

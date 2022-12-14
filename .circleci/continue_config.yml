@@ -1,0 +1,30 @@
+version: 2.1
+
+parameters:
+  build-angular_fe:
+    type: boolean
+    default: false
+  build-test:
+    type:  boolean
+    default: false
+
+workflows:
+  testbuild:
+    when: << pipeline.parameters.build-test >>
+    jobs:
+      build-test:
+        docker:
+          - image: alpine:3.15
+        steps:
+          - run:
+            name: Running test
+            command: echo 'Running Test Build'
+  angularbuild:
+    when: << pipeline.parameters.build-angular-fe >>
+    jobs:
+      build-angular:
+        docker:
+          - image: alpine:3.15
+        steps:
+          - run:
+            command: echo 'Running angular build'
