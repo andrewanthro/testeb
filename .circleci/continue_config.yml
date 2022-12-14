@@ -18,6 +18,7 @@ jobs:
       - run: ls
       - run: echo 'Building Test'
       - run: node --version
+      - run: cd apps/test
       - run: npm i
       - run: jest
   build-angular-job:
@@ -29,6 +30,7 @@ jobs:
       - run: ls
       - run: echo 'Building angular'
       - run: node --version
+      - run: cd apps/angular-fe
       - run: npm i
       - run: jest
 
