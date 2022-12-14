@@ -12,7 +12,7 @@ workflows:
   testbuild:
     when: << pipeline.parameters.build-test >>
     jobs:
-      - build-test:
+      build-test-job:
           docker:
             - image: alpine:3.15
           steps:
@@ -22,7 +22,7 @@ workflows:
   angularbuild:
     when: << pipeline.parameters.build-angular-fe >>
     jobs:
-      - build-angular:
+      build-angular-job:
           docker:
             - image: alpine:3.15
           steps:
