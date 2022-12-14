@@ -1,7 +1,7 @@
 version: 2.1
 
 parameters:
-  build-angular-fe:
+  build-angular_fe:
     type: boolean
     default: false
   build-test:
@@ -26,6 +26,6 @@ workflows:
     jobs:
       - build-test-job
   angularbuildwf:
-    when: << pipeline.parameters.build-angular-fe >>
+    when: << pipeline.parameters.build-angular_fe >>
     jobs:
       - build-angular-job
