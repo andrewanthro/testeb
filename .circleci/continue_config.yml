@@ -15,12 +15,16 @@ jobs:
     steps:
       - run: echo 'Building Test'
       - run: node --version
+      - run: npm i
+      - run: jest
   build-angular-job:
     docker:
       - image: cimg/node:19.2.0
     steps:
       - run: echo 'Building angular'
       - run: node --version
+      - run: npm i
+      - run: jest
 
 workflows:
   testbuildwf:
