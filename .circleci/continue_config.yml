@@ -11,14 +11,16 @@ parameters:
 jobs:
   build-test-job:
     docker:
-      - image: alpine:3.15
+      - image: cimg/node:19.2.0
     steps:
       - run: echo 'Building Test'
+      - run: node --version
   build-angular-job:
     docker:
-      - image: alpine:3.15
+      - image: cimg/node:19.2.0
     steps:
       - run: echo 'Building angular'
+      - run: node --version
 
 workflows:
   testbuildwf:
