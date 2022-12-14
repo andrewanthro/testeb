@@ -8,23 +8,24 @@ parameters:
     type:  boolean
     default: false
 
+jobs:
+  build-test-job:
+    docker:
+      - image: alpine:3.15
+    steps:
+      - run: echo 'Building Test'
+  build-angular-job:
+    docker:
+      - image: alpine:3.15
+    steps:
+      - run: echo 'Building angular'
+
 workflows:
-  testbuild:
+  testbuildwf:
     when: << pipeline.parameters.build-test >>
     jobs:
-      build-test-job:
-          docker:
-            - image: alpine:3.15
-          steps:
-            - run:
-                name: Running test
-                command: echo 'Running Test Build'
-  angularbuild:
+      - build-test-job
+  angularbuildwf:
     when: << pipeline.parameters.build-angular-fe >>
     jobs:
-      build-angular-job:
-          docker:
-            - image: alpine:3.15
-          steps:
-            - run:
-                command: echo 'Running angular build'
+      - build-angular-job
