@@ -15,7 +15,7 @@ jobs:
     steps:
       - checkout
       - run: cd apps && pwd && npm install
-      - run: cd apps && ls && cd node_modules && ls
+      - run: ls && cd node_modules && ls
       - run: cd apps && pwd && jest
 
       # - run: npm run test
