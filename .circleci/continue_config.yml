@@ -17,7 +17,7 @@ jobs:
       - run: echo 'Building Test'
       - run: cd apps/
       - run: npm install
-      - run: cd ../node_modules/.bin && ls
+      - run: cd .. && ls
       # - run: npm run test
       - run: ../node_modules/.bin/jest
   build-angular-job:
