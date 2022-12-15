@@ -15,11 +15,12 @@ jobs:
     steps:
       - checkout
       - run: echo 'Building Test'
-      - run: cd apps/
+      - run: cd apps/ && pwd && ls
+      - run: ls
       - run: npm install
-      - run: cd .. && ls
+      - run: pwd && cd .. && ls
       # - run: npm run test
-      - run: ../node_modules/.bin/jest
+      # - run: ../node_modules/.bin/jest
   build-angular-job:
     docker:
       - image: cimg/node:19.2.0
