@@ -8,6 +8,9 @@ parameters:
     type:  boolean
     default: false
 
+orbs:
+  eb: circleci/aws-elastic-beanstalk@2.0.1
+
 jobs:
   build-test-job:
     docker:
@@ -15,8 +18,7 @@ jobs:
     steps:
       - checkout
       - run: npm install
-      - run: ls && cd node_modules && ls
-      - run: cd apps && pwd
+      # must direct to the bin bc it won't run jest command direct
       - run: node_modules/.bin/jest
 
       # - run: npm run test
