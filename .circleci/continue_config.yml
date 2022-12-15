@@ -18,8 +18,7 @@ jobs:
       - run: cd apps/
       - run: npm i --production=false
       - run: npm run test
-      - run: npm i jest --global
-      - run: jest
+      - run: ../node_modules/.bin/jest
   build-angular-job:
     docker:
       - image: cimg/node:19.2.0
