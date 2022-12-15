@@ -14,23 +14,19 @@ jobs:
       - image: cimg/node:19.2.0
     steps:
       - checkout
-      - run: pwd
-      - run: ls
       - run: echo 'Building Test'
-      - run: node --version
-      - run: cd apps/test
+      - run: cd apps/
       - run: npm i --production=false
       - run: npm run test
+      - run: npm i jest
+      - run: jest
   build-angular-job:
     docker:
       - image: cimg/node:19.2.0
     steps:
       - checkout
-      - run: pwd
-      - run: ls
       - run: echo 'Building angular'
-      - run: node --version
-      - run: cd apps/angular-fe
+      - run: cd apps/
       - run: npm i --production=false
       - run: npm run test-angular-fe
 
