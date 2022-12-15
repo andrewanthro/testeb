@@ -14,12 +14,8 @@ jobs:
       - image: cimg/node:19.2.0
     steps:
       - checkout
-      - run:
-          command: npm install
-          working_directory: apps/test
-      - run:
-          command: jest
-          working_directory: apps
+      - run: cd apps && pwd && npm install
+      - run: cd apps && pwd && jest
 
       # - run: npm run test
       # - run: ../node_modules/.bin/jest
