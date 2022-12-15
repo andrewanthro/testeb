@@ -16,8 +16,9 @@ jobs:
       - checkout
       - run: echo 'Building Test'
       - run: cd apps/
-      - run: npm i --production=false
-      - run: npm run test
+      - run: npm install
+      - run: cd ../node_modules/.bin && ls
+      # - run: npm run test
       - run: ../node_modules/.bin/jest
   build-angular-job:
     docker:
