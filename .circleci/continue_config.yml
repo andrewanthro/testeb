@@ -16,7 +16,8 @@ jobs:
       - checkout
       - run: cd apps && pwd && npm install
       - run: ls && cd node_modules && ls
-      - run: cd apps && pwd && jest
+      - run: cd apps && pwd
+      - run: node_modules/.bin/jest
 
       # - run: npm run test
       # - run: ../node_modules/.bin/jest
