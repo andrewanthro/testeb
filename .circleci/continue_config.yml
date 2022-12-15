@@ -16,10 +16,10 @@ jobs:
       - checkout
       - run:
           command: npm install
-          working_directory: /apps/test
+          working_directory: apps/test
       - run:
           command: jest
-          working_directory: /apps
+          working_directory: apps
 
       # - run: npm run test
       # - run: ../node_modules/.bin/jest
