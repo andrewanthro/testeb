@@ -18,7 +18,7 @@ jobs:
       - run: cd apps/
       - run: npm i --production=false
       - run: npm run test
-      - run: npm i jest
+      - run: npm i jest --global
       - run: jest
   build-angular-job:
     docker:
