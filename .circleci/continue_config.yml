@@ -44,6 +44,8 @@ jobs:
       - run: node_modules/.bin/nx test alpha-be
       - run: node_modules/.bin/nx build alpha-be
       - run: pwd && ls
+      - run: eb/setup
+
 
 workflows:
   testbuildwf:
@@ -58,13 +60,5 @@ workflows:
     when: << pipeline.parameters.build-alpha_be >>
     jobs:
       - build-alpha_be-job
-      - eb/deploy:
-          requires:
-            - build-alpha_be-job
-          environment-name: Alphabe-env
-          filters:
-            branches:
-              only:
-                - main
-          app-dir: dist
+
 
