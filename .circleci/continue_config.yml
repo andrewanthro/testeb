@@ -59,10 +59,11 @@ workflows:
     jobs:
       - build-alpha_be-job
       - eb/deploy:
+          requires: build-alpha_be-job
           environment-name: Alphabe-env
           filters:
             branches:
               only:
                 - main
-          app-dir: /dist/
+          app-dir: dist
 
