@@ -48,6 +48,7 @@ jobs:
       - run:
           command: |
             cd dist
+            ls
             eb init alpha-be --platform node.js --region us-east-1
             eb deploy
 
