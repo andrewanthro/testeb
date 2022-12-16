@@ -49,3 +49,7 @@ workflows:
     when: << pipeline.parameters.build-angular_fe >>
     jobs:
       - build-angular-job
+  alpha-be-wf:
+    when: << pipeline.parameters.build-alpha_be >>
+    jobs:
+      - build-alpha_be-job
