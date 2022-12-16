@@ -6,7 +6,7 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "test-angular-fe" : "nx run angular-fe:test"
+    "test-angular-fe": "nx run angular-fe:test"
   },
   "private": true,
   "dependencies": {
@@ -46,7 +46,7 @@
     "@nrwl/nx-cloud": "latest",
     "@nrwl/workspace": "15.3.3",
     "@types/jest": "28.1.1",
-    "@types/node": "16.11.7",
+    "@types/node": "18.7.1",
     "@typescript-eslint/eslint-plugin": "^5.36.1",
     "@typescript-eslint/parser": "^5.36.1",
     "cypress": "^11.0.0",

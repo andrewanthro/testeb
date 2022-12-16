@@ -13,5 +13,6 @@ workflows:
           mapping: |
             apps/test/.* build-test true
             apps/angular-fe/.* build-angular_fe true
+            apps/alpha-be/.* build-alpha_be true
           base-revision: main
           config-path: .circleci/continue_config.yml
