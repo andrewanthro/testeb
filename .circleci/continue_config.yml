@@ -36,6 +36,9 @@ jobs:
       - run: npm i --production=false
       - run: npm run test-angular-fe
   build-alpha_be-job:
+    docker:
+      -image: cimg/node:19.2.0
+    steps:
       - checkout
       - run: npm install
       - run: node_modules/.bin/nx test alpha-be
