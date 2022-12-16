@@ -42,6 +42,9 @@ jobs:
       - checkout
       - run: npm install
       - run: node_modules/.bin/nx test alpha-be
+      - run: node_modules/.bin/nx build alpha-be
+      - run: pwd && ls
+
 
 workflows:
   testbuildwf:
