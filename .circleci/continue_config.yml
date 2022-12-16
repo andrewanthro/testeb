@@ -45,6 +45,12 @@ jobs:
       - run: node_modules/.bin/nx build alpha-be
       - run: pwd && ls
       - eb/setup
+      - run:
+        command: |
+          cd dist
+          eb init alpha-be
+          eb deploy --platform node.js --region us-east-1
+
 
 
 workflows:
