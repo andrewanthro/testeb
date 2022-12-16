@@ -44,7 +44,7 @@ jobs:
       - run: node_modules/.bin/nx test alpha-be
       - run: node_modules/.bin/nx build alpha-be
       - run: pwd && ls
-      - run: eb/setup
+      - eb/setup
 
 
 workflows:
