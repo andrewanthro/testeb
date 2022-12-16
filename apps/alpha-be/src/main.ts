@@ -15,7 +15,7 @@ async function bootstrap() {
   const port = process.env.PORT || 8080;
   await app.listen(port);
   Logger.log(
-    `🚀 Application is runnon: http://lst:${port}/${globalPrefix}`
+    `🚀 Application is runon: http://lst:${port}/${globalPrefix}`
   );
 }
 
