@@ -37,7 +37,7 @@ jobs:
       - run: npm run test-angular-fe
   build-alpha_be-job:
     docker:
-      -image: cimg/node:19.2.0
+      - image: cimg/node:19.2.0
     steps:
       - checkout
       - run: npm install
