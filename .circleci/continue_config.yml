@@ -46,10 +46,10 @@ jobs:
       - run: pwd && ls
       - eb/setup
       - run:
-        command: |
-          cd dist
-          eb init alpha-be
-          eb deploy --platform node.js --region us-east-1
+          command: |
+            cd dist
+            eb init alpha-be
+            eb deploy --platform node.js --region us-east-1
 
 
 
