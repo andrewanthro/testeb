@@ -59,7 +59,8 @@ workflows:
     jobs:
       - build-alpha_be-job
       - eb/deploy:
-          requires: build-alpha_be-job
+          requires:
+            - build-alpha_be-job
           environment-name: Alphabe-env
           filters:
             branches:
